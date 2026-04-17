@@ -8,6 +8,7 @@ import Marketplace from "./pages/Marketplace.tsx";
 import ProductDetails from "./pages/ProductDetails.tsx";
 import About from "./pages/About.tsx";
 import Contact from "./pages/Contact.tsx";
+import AurexonIQ from "./pages/AurexonIQ.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/aurexoniq" element={<AurexonIQ />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

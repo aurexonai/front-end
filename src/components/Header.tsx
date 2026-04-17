@@ -88,7 +88,7 @@ const Header = () => {
         {/* Right Actions */}
         <div className="flex items-center gap-4">
           <Link
-            to="/marketplace"
+            to="/aurexoniq"
             className="hidden sm:flex items-center px-6 py-2.5 font-heading font-bold bg-accent text-accent-foreground transition-all shadow-[4px_4px_0px_black] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] text-[14px] border-2 border-black rounded-full"
           >
             AurexonIQ Engine
@@ -133,7 +133,7 @@ const Header = () => {
                   );
                 })}
                 <Link
-                  to="/marketplace"
+                  to="/aurexoniq"
                   className="mt-4 flex items-center justify-center py-4 text-base font-heading font-black tracking-wide bg-accent text-accent-foreground border-2 border-black shadow-[5px_5px_0px_black] active:shadow-none active:translate-x-[5px] active:translate-y-[5px] transition-all rounded-full"
                 >
                   AurexonIQ Engine

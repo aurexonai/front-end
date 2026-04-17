@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Apple } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -53,19 +54,21 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.6 }}
           >
-            <button className="group relative w-full flex items-center justify-between bg-accent border-[3px] border-black rounded-[1.5rem] sm:rounded-[2rem] p-3 sm:p-4 md:p-5 transition-all duration-300 shadow-[0_5px_0_black] hover:shadow-none hover:translate-y-1 active:scale-[0.99] overflow-hidden">
-              <div className="flex items-center gap-3 sm:gap-4 md:gap-6 px-1 sm:px-2 md:px-4">
-                <div className="flex flex-col items-start leading-none gap-0.5">
-                  <span className="font-heading font-black text-sm sm:text-xl md:text-2xl lg:text-3xl text-black tracking-tight uppercase">
-                    AurexonIQ Engine
-                  </span>
+            <Link to="/aurexoniq">
+              <button className="group relative w-full flex items-center justify-between bg-accent border-[3px] border-black rounded-[1.5rem] sm:rounded-[2rem] p-3 sm:p-4 md:p-5 transition-all duration-300 shadow-[0_5px_0_black] hover:shadow-none hover:translate-y-1 active:scale-[0.99] overflow-hidden">
+                <div className="flex items-center gap-3 sm:gap-4 md:gap-6 px-1 sm:px-2 md:px-4">
+                  <div className="flex flex-col items-start leading-none gap-0.5">
+                    <span className="font-heading font-black text-sm sm:text-xl md:text-2xl lg:text-3xl text-black tracking-tight uppercase">
+                      AurexonIQ Engine
+                    </span>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="bg-black/5 p-2 sm:p-2.5 md:p-3 rounded-full border border-black/10 group-hover:bg-black group-hover:text-white transition-all duration-500 mr-1 sm:mr-2">
-                <ArrowUpRight className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 transition-transform duration-500 group-hover:rotate-45" />
-              </div>
-            </button>
+                
+                <div className="bg-black/5 p-2 sm:p-2.5 md:p-3 rounded-full border border-black/10 group-hover:bg-black group-hover:text-white transition-all duration-500 mr-1 sm:mr-2">
+                  <ArrowUpRight className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 transition-transform duration-500 group-hover:rotate-45" />
+                </div>
+              </button>
+            </Link>
           </motion.div>
 
         </div>
