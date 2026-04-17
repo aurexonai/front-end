@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 192 38% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 192 38% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 192 38% 15%;
+
+    --primary: 192 38% 15%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 192 38% 15%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 75 95% 63%;
+    --accent-foreground: 192 38% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 91%;
+    --input: 0 0% 91%;
+    --ring: 75 95% 63%;
+
+    --radius: 0.75rem;
+
+    --section-alt: 0 0% 96%;
+    --glass: 0 0% 100% / 0.6;
+    --glass-border: 0 0% 100% / 0.2;
+    --glow: 75 95% 63%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-2xl border border-white/30 shadow-xl rounded-2xl;
+  }
+
+  .glass-card-dark {
+    background: rgba(23, 48, 54, 0.8);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 24px hsl(var(--glow) / 0.35), 0 0 80px hsl(var(--glow) / 0.12);
+  }
+
+  .glow-accent-sm {
+    box-shadow: 0 0 12px hsl(var(--glow) / 0.25);
+  }
+
+  .glow-accent-hover:hover {
+    box-shadow: 0 8px 30px hsl(var(--glow) / 0.35), 0 0 60px hsl(var(--glow) / 0.1);
+  }
+
+  .section-padding {
+    @apply py-24 md:py-32 px-4 sm:px-6 md:px-8;
+  }
+
+  .container-main {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .section-label {
+    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 text-accent-foreground text-xs font-semibold tracking-wide uppercase mb-5;
+  }
+
+  .section-title {
+    @apply font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground leading-tight tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply mt-5 text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-accent text-accent-foreground font-heading font-black text-sm transition-all border-2 border-black shadow-[4px_4px_0px_black] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px];
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-background border-2 border-black text-foreground font-heading font-black text-sm transition-all shadow-[4px_4px_0px_black] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px];
+  }
+
+  .gradient-mesh {
+    background: 
+      radial-gradient(ellipse 80% 60% at 20% 40%, hsl(var(--glow) / 0.08), transparent),
+      radial-gradient(ellipse 60% 80% at 80% 20%, hsl(192 38% 15% / 0.04), transparent),
+      radial-gradient(ellipse 50% 50% at 50% 80%, hsl(var(--glow) / 0.05), transparent);
+  }
+
+  .glass-modern {
+    @apply bg-background/70 backdrop-blur-xl border border-border/50 shadow-[0_8px_32px_rgba(0,0,0,0.1)];
+  }
+
+  .glass-modern-dark {
+    @apply bg-primary/80 backdrop-blur-2xl border border-white/10 shadow-2xl;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
